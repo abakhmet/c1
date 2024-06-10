@@ -1,0 +1,63 @@
+html {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: lightgreen;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  border: solid 1px yellow;
+  margin: auto;
+  max-width: 320rem;
+}
+
+#progress {
+  border: 1px solid white;;
+  width: 100%;
+}
+#progress td {
+  background: darkgray;
+  height: 0.2rem;;
+}
+#progress td.success {
+  background: darkgreen;
+}
+#progress td.failed {
+  background: darkred;
+}
+#progress td.current {
+  background: dimgray;
+}

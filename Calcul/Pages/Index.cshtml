@@ -1,0 +1,65 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Calcul</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="content" style="width: 20rem; height: 20rem;; margin: auto;">
+        <br/>
+        <div id="problem"
+             style="width: 100%; text-align: center; font-family: monospace; font-size: 5rem; font-weight: bold;">
+        </div>
+        <br/>
+        <br/>
+        <div style=" width: 100%; text-align: center;">
+            <input id="result"
+                   type="text" inputmode="numeric" pattern="[0-9]*"
+                   value=""
+                   style="background: yellowgreen; color: black; 
+                   width: 100%; text-align: center;
+                   border: 0; padding: 0; 
+                   font-family: monospace; font-size: 3rem; font-weight: bold;"/>
+        </div>
+
+        <div>
+            <table id="progress"></table>
+        </div>
+        <div>
+            <span>Time: </span><span id="time">01:30</span>
+            &nbsp;
+            <span>Avg solve time: </span><span id="avgTime">3.10s</span>
+        </div>
+        <div>
+            <span>Total: </span><span id="total">40</span>
+            &nbsp;
+            <span>Solved: </span><span id="solved">10</span>
+            &nbsp;
+            <span>Failed: </span><span id="failed">1</span>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script type="text/javascript">
+    $(function () { main(); });
+</script>
+
+</body>
+</html>
